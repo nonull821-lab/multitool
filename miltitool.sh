@@ -42,7 +42,7 @@ exiftool -Make="Apple" \
 -ModifyDate="2026:02:24 23:15:04" \
 -GPSLatitude="55.7512" -GPSLatitudeRef="N" \
 -GPSLongitude="37.6184" -GPSLongitudeRef="E" \
--overwrite_original '$photo'
+-overwrite_original "$photo"
 read -p "нажмите ENTER что бы выйти . . . "
 ;;
 7)
