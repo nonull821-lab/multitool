@@ -1,3 +1,4 @@
+# created by farion
 echo "Hallo!"
 echo "1> смена мак адреса"
 echo "2> переводчик в base64"
