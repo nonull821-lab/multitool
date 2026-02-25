@@ -8,6 +8,8 @@ echo "5> пробив по домену"
 echo "6> подделать exif данные фото"
 echo "7> прочитать exif данные фото"
 echo "8> очистить историю"
+echo "9> генератор карт"
+echo "10> генератор личностей"
 read -p "выбирай> " user
 case $user in 
 1)
@@ -34,7 +36,7 @@ whois $domen
 read -p "нажмите ENTER что бы выйти . . . "
 ;;
 6)
-read -p "введите путь к фотке (пример: /home/photo/my_sister.jpg/)> " photo
+read -p "введите путь к фотке: " photo
 exiftool -Make="Apple" \
 -Model="iPhone 17 Pro" \
 -Software="iOS 19.2" \
@@ -47,12 +49,44 @@ exiftool -Make="Apple" \
 read -p "нажмите ENTER что бы выйти . . . "
 ;;
 7)
-read -p "введите путь к фото (пример: /home/photo/my_sister.jpg/)> " photoone
-exiftool '$photoone'
+read -p "введите путь к фото: " photoone
+exiftool "$photoone"
 read -p "нажмите ENTER что бы выйти . . . "
 ;;
 8)
-history -c && history -c
+history -c && history -w
+echo "история очищена"
+read -p "нажмите ENTER что бы выйти . . . "
+;;
+9)
+bin=$((510000 + RANDOM % 90000))
+part1=$((1000 + RANDOM % 9000))
+part2=$((1000 + RANDOM % 9000))
+part3=$((1000 + RANDOM % 9000))
+mm=$((1 + RANDOM % 12))
+yy=$((26 + RANDOM % 5))
+cvv=$((100 + RANDOM % 899))
+echo "Карта: $bin$part1$part2$part3"
+echo "Срок: $mm/$yy"
+echo "CVV: $cvv"
+read -p "нажмите ENTER что бы выйти . . . "
+;;
+10)
+read -p "какой пол? м/ж: " pol
+names_m=("Иван" "Дмитрий" "Олег" "Виктор" "Илья" "Елисей" "Никита")
+names_f=("Анна" "Мария" "Елена" "Ольга" "Ирина" "Татьяна")
+surnames=("Иванов" "Петров" "Сидоров" "Кузнецов" "Смирнов" "Попов")
+patros_m=("Иванович" "Дмитриевич" "Олегович" "Викторович" "Ильич" "Елисеевич" "Никитич")
+patros_f=("Ивановна" "Дмитриевна" "Олеговна" "Викторовна" "Ильинична" "Елисеевна" "Никитична")
+
+case $pol in
+м|М)
+echo "${surnames[$RANDOM % 6]} ${names_m[$RANDOM % 7]} ${patros_m[$RANDOM % 7]}"
+;;
+ж|Ж)
+echo "${surnames[$RANDOM % 6]}а ${names_f[$RANDOM % 6]} ${patros_f[$RANDOM % 6]}"
+;;
+esac
 read -p "нажмите ENTER что бы выйти . . . "
 ;;
 *)
