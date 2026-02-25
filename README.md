@@ -1,6 +1,5 @@
 # multitool
 my project on linux (or wsl)
-ну пропишите если вы новичёк это 
+and input in bash/termux this's command
 sudo apt update && sudo apt install nmap whois macchanger -y
-и пж запускайте miltitool.sh
-and pls start miltitool.sh
+and miltitool.sh THIS IS MAIN SCRIPT
