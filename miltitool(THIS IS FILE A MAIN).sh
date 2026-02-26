@@ -24,7 +24,7 @@ echo "7> read exif-info photo"
 echo "8> clear history"
 echo "9> generation cards"
 echo "10> generation"
-echo "                                     00>выход"
+echo "                                     00>exit"
 read -p "choose> " user
 case $user in 
 00)
