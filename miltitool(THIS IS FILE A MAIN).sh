@@ -30,6 +30,7 @@ case $user in
 00)
 echo "goodbye!"
 exit
+;;
 1)
 bash 'modules/MAC-addr.sh'
 ;;
