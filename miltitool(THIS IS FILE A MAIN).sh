@@ -14,7 +14,7 @@ echo '''
      
 '''
 echo -ne "\e[00m"
-echo "1> redact mac-addr			11> redacted"
+echo "1> redact mac-addr			11> redacted hostname"
 echo "2> translate on base64			12> chmod on file (733)"
 echo "3> nmap search    			13> ping-test"
 echo "4> search on ip				14> list privacy dns"
@@ -23,7 +23,7 @@ echo "6> go fake exif info of photo"
 echo "7> read exif-info photo"
 echo "8> clear history"
 echo "9> generation cards"
-echo "10> generation"
+echo "10> generation info of people"
 echo "                                     00>exit"
 read -p "choose> " user
 case $user in 
@@ -94,8 +94,8 @@ read -p "how gender? m/w: " pol
 names_m=("Jack" "James" "Oliver" "Victor" "Isaac" "Ethan" "Nick")
 names_f=("Anna" "Mary" "Helen" "Olivia" "Irene" "Taylor")
 surnames=("Walker" "Pierce" "Stone" "Hunter" "Black" "Ford")
-middle_m=("John" "David" "Alex" "Vincenzo" "Lee" "Elliot" "Nathan")
-middle_f=("Jane" "Diana" "Rose" "Victoria" "Lynn" "Elizabeth" "Nicole")
+patros_m=("John" "David" "Alex" "Vincenzo" "Lee" "Elliot" "Nathan")
+patros_f=("Jane" "Diana" "Rose" "Victoria" "Lynn" "Elizabeth" "Nicole")
 #this is soft by farion
 case $pol in
 m|M)
@@ -128,7 +128,7 @@ read -p "press ENTER on exit . . .  "
 echo "list of dns:"
 echo "1) 194.242.2.3 (mullvad dns)"
 echo "2) 9.9.9.9 (Quad9 dns)"
-echo "3) 1.1.1.1 (cloudfare dns)"
+echo "3) 1.1.1.1 (cloudflare dns)"
 read -p "press ENTER on exit . . .  "
 ;;
 15)
