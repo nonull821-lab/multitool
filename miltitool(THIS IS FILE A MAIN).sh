@@ -13,6 +13,7 @@ echo '''
 |__/ |__/ |__/ \______/ |__/   \___/  |__/         \___/   \______/  \______/ |__/
      
 '''
+echo -ne "\e[00m"
 echo "1> redact mac-addr			11> redacted"
 echo "2> translate on base64			12> chmod on file (733)"
 echo "3> nmap search    			13> ping-test"
