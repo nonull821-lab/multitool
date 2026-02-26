@@ -25,7 +25,7 @@ echo "8> clear history"
 echo "9> generation cards"
 echo "10> generation"
 echo "                                     00>выход"
-read -p "выбирай> " user
+read -p "choose> " user
 case $user in 
 00)
 echo "goodbye!"
