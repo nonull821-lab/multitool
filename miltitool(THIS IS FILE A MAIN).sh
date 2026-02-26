@@ -1,6 +1,5 @@
 #!/bin/bash
 #created by farion
-read -p ""
 clear
 echo -ne "\e[34m"
 echo '''
